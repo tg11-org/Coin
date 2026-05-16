@@ -1,0 +1,19 @@
+[Unit]
+Description=TG11 daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+User=tg11
+Group=tg11
+ExecStart=/opt/tg11/src/tg11d -daemon -datadir=/var/lib/tg11 -pid=/var/lib/tg11/tg11d.pid
+ExecStop=/opt/tg11/src/tg11-cli -datadir=/var/lib/tg11 stop
+PIDFile=/var/lib/tg11/tg11d.pid
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=180
+TimeoutStopSec=60
+
+[Install]
+WantedBy=multi-user.target
