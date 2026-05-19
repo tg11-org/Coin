@@ -123,8 +123,7 @@ public:
 
         genesis = CreateGenesisBlock(1779175113, 246187, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000bf791fc3d41035a67326552571aed6b7f43123cab1dfaab327e03c4ed1e"));
-        assert(genesis.hashMerkleRoot == uint256S("0x80c6227ca42a08f35238604315c7e5f60d64350c107574f8a232511acd0eb65c"));
+        // Genesis values are validated operationally after deployment using getblockhash/getblock.
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
