@@ -123,10 +123,10 @@ public:
 
         const char* pszMainnetTimestamp = "Vulpfin activated. TG11 engaged. Fop pawb confirmed. Blockchain go brrr~ - May 2026";
         const CScript mainnetGenesisOutputScript = CScript() << ParseHex("0463030147bf3e927bec4f20911f9fb55f42aa9d30abf8b80e8685f4f57ec523f30a37654908447ebeca472921297e6347b805223387461c81b5849b8d2f38950d") << OP_CHECKSIG;
-        genesis = CreateGenesisBlock(pszMainnetTimestamp, mainnetGenesisOutputScript, 1779175113, 741932, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(pszMainnetTimestamp, mainnetGenesisOutputScript, 1779175113, 1393842, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000a349706b44dfb0dbb06c91579ebcd50ca8d0efc84ce8aef2c215cd674c0"));
-        assert(genesis.hashMerkleRoot == uint256S("0x4c8f12550227d3ebf195dc355db66630b69d8c788f862346b86167ee1916c29f"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000248811c0adca90a3b7ac99368a9dd19f3309de67624439c1394b22d5ecc"));
+        assert(genesis.hashMerkleRoot == uint256S("0x6c7a04717805104acdd4648eb1328bc03a6c934e70f7b6580c03b12c1290b3f1"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
