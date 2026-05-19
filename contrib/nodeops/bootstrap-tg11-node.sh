@@ -31,7 +31,7 @@ Options:
   -a, --addnode <host:port>    Add bootstrap peer (repeatable)
       --rpcuser <user>         RPC username (recommended for private-rpc)
       --rpcpassword <pass>     RPC password (recommended for private-rpc)
-      --force                  Overwrite existing tg11.conf without backup prompt
+      --force                  Overwrite existing litecoin.conf without backup prompt
   -h, --help                   Show this help
 EOF
 }
@@ -155,7 +155,7 @@ if [[ ! -f "${TEMPLATE}" ]]; then
 fi
 
 mkdir -p "${DATADIR}"
-CONF_PATH="${DATADIR}/tg11.conf"
+CONF_PATH="${DATADIR}/litecoin.conf"
 
 backup_and_copy_template "${TEMPLATE}" "${CONF_PATH}"
 
@@ -189,7 +189,8 @@ if [[ "${ROLE}" == "private-rpc" ]]; then
   } >> "${CONF_PATH}"
 fi
 
-chmod 600 "${CONF_PATH}" || true
+# Service runs as tg11 user; keep config private but readable by service group.
+chmod 640 "${CONF_PATH}" || true
 
 echo "Wrote ${CONF_PATH} using role '${ROLE}'."
 echo "Next steps:"

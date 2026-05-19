@@ -12,6 +12,10 @@ This folder contains practical templates and scripts for running TG11 nodes in p
 - `fleet-orchestrate.sh`: Multi-host SSH orchestrator for install/update/verify.
 - `fleet-bootstrap-all.sh`: One-command wrapper to prepare repos + install + verify fleet.
 - `fleet/hosts.example.tsv`: Example host inventory for fleet orchestration.
+- `package-release.sh`: Builds a versioned binary release archive and checksum file.
+- `public-testnet-bootstrap.sh`: Boots a public testnet fleet from an inventory TSV.
+- `mainnet-candidate-check.sh`: Checks launch-readiness docs and freeze items.
+- `fleet/public-testnet-hosts.example.tsv`: Example inventory for a public testnet.
 - `tg11-mainnet-seed.conf`: Public seed/full-relay node template.
 - `tg11-mainnet-full.conf`: Public full node template with optional RPC disabled by default.
 - `tg11-mainnet-private-rpc.conf`: Private node template for wallet/indexer/backend RPC use.
@@ -79,7 +83,7 @@ One-command full bootstrap (clone/pull + install + verify):
 contrib/nodeops/fleet-bootstrap-all.sh --inventory contrib/nodeops/fleet/hosts.example.tsv --repo-root /opt/tg11 --repo-url https://github.com/TrentonGage11/Coin.git
 ```
 
-After bootstrapping, edit the generated `tg11.conf` and fill placeholders like:
+After bootstrapping, edit the generated `litecoin.conf` and fill placeholders like:
 
 - `externalip`
 - `rpcbind`

@@ -194,7 +194,7 @@ fi
 
 echo ""
 echo "Node profile prepared for ${NAME} (${ROLE}) at ${DATADIR}"
-echo "Config: ${DATADIR}/tg11.conf"
+echo "Config: ${DATADIR}/litecoin.conf"
 echo "Suggested service name: ${SERVICE_NAME}.service"
 echo "Upgrade flow:"
 echo "  git pull"

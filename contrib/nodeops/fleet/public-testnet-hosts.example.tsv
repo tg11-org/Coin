@@ -1,0 +1,8 @@
+# name	role	fqdn	ssh_host	ssh_user	datadir	service_name	rpc_cidr
+seed1	seed	seed1.testnet.tg11.org	203.0.113.11	root	/var/lib/tg11-testnet-seed1	tg11d-testnet-seed1	127.0.0.1
+seed2	seed	seed2.testnet.tg11.org	203.0.113.12	root	/var/lib/tg11-testnet-seed2	tg11d-testnet-seed2	127.0.0.1
+full1	full	full1.testnet.tg11.org	203.0.113.21	root	/var/lib/tg11-testnet-full1	tg11d-testnet-full1	127.0.0.1
+rpc1	private-rpc	rpc1.testnet.tg11.org	203.0.113.31	root	/var/lib/tg11-testnet-rpc1	tg11d-testnet-rpc1	10.10.0.0/16
+explorer1	explorer	explorer.testnet.tg11.org	203.0.113.41	root	/var/lib/tg11-testnet-explorer	tg11-explorer	10.10.0.0/16
+faucet1	faucet	faucet.testnet.tg11.org	203.0.113.42	root	/var/lib/tg11-testnet-faucet	tg11-faucet	10.10.0.0/16
+status1	status	status.testnet.tg11.org	203.0.113.43	root	/var/lib/tg11-testnet-status	tg11-status	10.10.0.0/16

@@ -1,0 +1,6 @@
+# name	role	fqdn	ssh_host	ssh_user	datadir	service_name	rpc_cidr
+seed1	seed	seed1.tg11.org	50.116.45.133	root	/var/lib/tg11-seed1	tg11d-seed1	127.0.0.1
+seed2	seed	seed2.tg11.org	50.116.45.219	root	/var/lib/tg11-seed2	tg11d-seed2	127.0.0.1
+seed3	seed	seed3.tg11.org	50.116.45.254	root	/var/lib/tg11-seed3	tg11d-seed3	127.0.0.1
+rpc1	private-rpc	rpc1.tg11.org	173.230.135.139	root	/var/lib/tg11-rpc1	tg11-rpc1	10.10.0.0/16
+rpc2	private-rpc	rpc2.tg11.org	173.230.135.143	root	/var/lib/tg11-rpc2	tg11-rpc2	10.10.0.0/16
