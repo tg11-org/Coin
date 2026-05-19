@@ -123,9 +123,10 @@ public:
 
         const char* pszMainnetTimestamp = "Vulpfin activated. TG11 engaged. Fop pawb confirmed. Blockchain go brrr~ - May 2026";
         const CScript mainnetGenesisOutputScript = CScript() << ParseHex("0463030147bf3e927bec4f20911f9fb55f42aa9d30abf8b80e8685f4f57ec523f30a37654908447ebeca472921297e6347b805223387461c81b5849b8d2f38950d") << OP_CHECKSIG;
-        genesis = CreateGenesisBlock(pszMainnetTimestamp, mainnetGenesisOutputScript, 1779175113, 246187, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(pszMainnetTimestamp, mainnetGenesisOutputScript, 1779175113, 1187300, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        // Genesis values are validated operationally after deployment using getblockhash/getblock.
+        assert(consensus.hashGenesisBlock == uint256S("0x00000cb55929c1a8d24889909e29e9d70b1e58e675ad572f11a4149713ed3902"));
+        assert(genesis.hashMerkleRoot == uint256S("0xaf0ef39d817d1407ed57e7047e5c00d9c2da0c12e9d474235685b95b0404ed81"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
